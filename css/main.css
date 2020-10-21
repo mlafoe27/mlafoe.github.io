@@ -1,13 +1,15 @@
 body {
-    position:relative;
-    margin:auto;
-  
+
+    margin:0px auto;
+    width:100%;
 }
 
 #container {
     position:relative;
     margin:auto;
-    
+    width:100%;
+  
+  
 }
 
 h1{
@@ -15,43 +17,11 @@ h1{
     font-size:72px;
 }
 
-section {
-    width:80%;
-    margin:auto;
-}
-
-.primaryNav {
-    float:left;
-    height:150px;
-    margin-left:140px;
-    margin-top:25px;
-
-
-}
-
-
-
-.primaryNavItems {
-    margin-right:140px;
-    display:inline-block;
-    margin-left:800px;
-    position:relative;
-    z-index:1;
-    
-}
 
 
 
 
-
-.socialmedia {
-   display:inline-block;
-   padding-right:5px;
-    
-    
-}
-
-.hero {
+#hero {
     background-image: url("../images/Portfolio-Hero-Image.gif");
     height:720px;
     background-color:#e6ae00;
@@ -59,6 +29,47 @@ section {
     width:100%;
     margin:0px auto;
 }
+
+
+
+
+.primaryNav {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding-right:140px;
+    padding-left:140px;
+    padding-top:25px;
+
+
+
+}
+
+
+
+.primaryNavItems {
+    padding-right:50px;
+    padding-left:700px;
+    position:relative;
+    z-index:1;
+    align-items:center;
+    justify-content:space-evenly;
+    
+}
+
+
+
+
+
+.socialmedia img {
+    padding-top:0px;
+    padding-left:40px;
+    padding-right:0px;
+    justify-content: space-evenly;
+    
+}
+
+
 
 h2 {
     font-family: 'Bebas Neue', cursive;
@@ -83,44 +94,16 @@ p{
     font-size:27px;
 } 
 
-
+.portfolio {
+    position:relative;
+    display:grid;
+   margin:0px auto;
+    
+}
 .portfolio h1{
     margin-top:35px;
     position:relative;
-    
     text-align:center;
-}
-
-.portfolioContainer {
-    display:inline-block;
-    margin:auto;
-    position:relative;
-    margin-bottom:150px;
-    margin-left:140px;
-    
-}
-
-.portfolio ul{
-  
-    text-align:center;
-    margin-bottom:35px;
-
-}
-
-.thumbnail {
-    display:inline-block;
-    position:relative;
-}
-.portfolio {
-    position:relative;
-    
-}
-
-.aboutMe section{
-    background-color:#212121;
-    height:900px;
-    position:relative;
-    width:80%;
 }
 
 .secondaryNav {
@@ -134,77 +117,222 @@ p{
     margin:0px auto;
 }
 
+.portfolioContainer {
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "urbanPeak ftc dogGone versaTrip"
+    "learfield newks cured gaslight"
+    "india treeChic zach";
+    margin:0;
+    position:relative;
+    padding-bottom:70px;
+    padding-top:50px;
+    width:80%;
+    padding-left:70px;
+    padding-right:70px;
+    
+      
+}
+
+.portfolio ul{
+  
+    justify-content:space-evenly;
+    text-align:center;
+    padding-bottom:35px;
+
+}
+
+.thumbnail {
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    display:grid;
+    align-content:end;
+    margin:0px auto;
+}
+
+
+
+
+
+
+
+
+
+.aboutMe section{
+    background-color:#212121;
+    display:grid;
+    height:auto;
+    position:relative;
+    width:80%;
+}
+
+
+
 
 
 
 .aboutMe p{
     line-height:1.3em;
     width:600px;
-    position:absolute;
-    margin-left:25px;
+
 }
 
 .aboutMe {
     position:relative;
-    height:745px;
+   margin:0px auto;
     width:100%;
     background-color:#212121;
 }
 
 .aboutMeContent {
-   width:80%;
+    padding-right:10px;
+    width:80%;
+    margin:0px auto;
+    display:grid;
+    padding-left:10px;
     position:relative;
-    margin-left:140px;
-  
+    grid-template-rows:10% 33% 57%;
+    grid-template-columns:40% 30% 30%;
+    grid-template-areas:
+    "headshot aboutHeading aboutHeading"
+    "headshot summary summary"
+    "download uxskills tools";
+    align-items:flex-start;
+    
+    
     
 }
 
-.aboutMeContent img{
-    float:left;
+#headshot {
+    grid-area:headshot;
+    width:500px;
      position:relative;
+     column-width:500px;
+    
     
      
  }
 
- .aboutMeContent p{
-    float:left;
-    position:relative;
-    margin-left:50px;
-    width:900px;
-    height:auto;
-    color:white;
-     
- }
+#aboutHeading {
+   grid-area:aboutHeading;
+  
+    
 
- .aboutMeContent h1{
-   color:#e6ae00;
-    margin-left:550px;
-    margin-top:0px;
+    padding-top:0px;
     padding-top:25px;
-     
- }
+    padding-left:10px;
+}
 
+#aboutHeading h1{
+    color:#e6ae00;
+}
 
+#summary {
+   grid-area:summary;
+    position:relative;
+    height:auto;
+    padding-top:25px;
+   padding-right:10px;
+    width:100%;
+    
+    
+}
 
+.aboutMe p{
+    color:white;
+    width:100%;
+    line-height:1.5em;
+    font-size:29px;
+}
 
+.aboutMe h2{
+    color:#e6ae00;
+    width:100%;
 
+}
+
+.aboutMe h3 {
+    color:white;
+  
+
+}
+
+#uxskills {
+    grid-area:uxskills;
+    position:relative;
+    padding-right:15px;
+}
+
+#uxskills p {
+    color:white;
+    line-height:1.3em;
+}
+
+#tools {
+    grid-area:tools;
+    position:relative;
+    padding-right:10px;
+}
+
+#tools li {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:27px;
+    color:white;
+    line-height:1.3em;
+}
+
+#download {
+    grid-area:download;
+    position:relative;
+    padding-right:15px;
+    
+}
+
+#download p{
+    
+    width:80%;
+}
 
 .button {
-    float:left;
+    border:none;
     background-color:#e6ae00;
-    padding:15px;
-   margin-left:50px;
+    padding:3px;
     text-align:center;
-    width:125px;
+    width:150px;
+    height:55px;
+    justify-content:center;
+    font-family:'Josefin Sans', sans-serif;
+    font-size:20px;
    
 }
 
+button h3 {
+    text-align:center;
+    justify-content:center;
+    color:#212121;
 
+
+}
+
+#sendMessage {
+    padding-left:140px;
+    padding-top:65px;
+}
+
+form {
+    width:80%;
+    margin:0px auto;
+    
+}
 
 
 .logoFooter {
     position:relative;
-    padding-top:50px;
+   
     padding-left:300px;
     padding-right:300px;
 }
@@ -212,7 +340,13 @@ p{
 .contact {
     position:relative;
     height:900px;
+    width:80%;
+  
    
+}
+
+.messageContent {
+    padding-left:140px;
 }
 
 .name {
@@ -233,42 +367,41 @@ p{
 
 }
 
+
+
 footer p{
     font-size:18px;
-    color:rgba(33,33,33,0.3);
-    float:right;
+    color:rgb(33,33,33);
+    justify-content:center;
     text-align:center;
-    padding-top:5px;
-    margin-right:140px;
-}
-
-.logoFooter {
-    position:relative;
-    display:inline-block;
-    padding-top:5px;
    
-
+    
 }
+
+
 
 footer {
     background-color:#e6ae00;
     height:auto;
     margin-bottom:0px;
     position:relative;
-    display:inline-block;
+    display:flex;
+    flex-direction:row;
     width:100%;
+    align-items:center;
+    justify-content:center;
 }
 
 
 .footerSM {
-    float:left;
+  position:relative;
     height:150px;
-    margin-left:140px;
-    margin-top:25px;
+    padding-left:140px;
+    padding-top:75px;
 }
 
 .footerNav {
-    float:right;
+    
     text-align:center;
     padding-bottom:5px;
     margin-top:25px;
@@ -285,4 +418,242 @@ footer {
    
         margin:5px;
     
+}
+
+
+
+/*--------MEDIA QUERIES--------------------*/
+
+/*--MOBILE--*/
+@media only screen and (min-width:320px) and (max-width: 480px) {
+    
+    body {
+
+        width:100%;
+    }
+
+
+    #container {
+    
+        margin:0px auto;
+        width:100%;
+        
+    }
+    
+
+    h1{
+        font-family: 'Bebas Neue', 'Arial', cursive;
+        font-size:48px;
+    }
+    
+    p{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size:16px;
+    } 
+
+    section {
+        width:100%;
+        
+    }
+
+    
+
+    #hero {
+        background-image: url("../images/Portfolio-Hero-Image.gif");
+       height:inherit;
+        background-repeat:no-repeat;
+        width:100%;
+        margin:0px auto;  
+        background-position: center center; 
+     
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+    
+    
+    
+    
+   
+    
+
+    .primaryNav {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        padding-right:15px;
+        padding-left:15px;
+        padding-top:25px;
+        height:200px;
+
+    
+    }
+
+    .primaryLogo {
+        width:80%;
+
+    }
+    .primaryNav li {
+        display:none;
+    }
+
+    .socialmedia {
+        padding-top:0px;
+        padding-left:10px;
+        padding-right:0px;
+        justify-content: space-evenly;
+        display:flex;
+        flex-direction:row;
+        
+    }
+
+
+    .portfolio {
+        width:80%;
+        display:grid;
+    }
+
+    .portfolioContainer {
+        display:grid;
+        grid-template-columns:80%;
+        grid-template-rows:auto;
+        margin:0px auto;
+        position:relative;
+        padding-bottom:70px;
+        padding-top:50px;
+        grid-template-areas:
+        "urbanPeak"
+        "ftc"
+        "dogGone"
+        "versaTrip"
+        "learfield"
+        "newks"
+        "cured"
+        "gaslight"
+        "india"
+        "treeChic"
+        "zach";
+        
+          
+    }
+
+    .thumbnail {
+        width:100%;
+        margin:0px auto;
+      
+    }
+
+
+    .aboutMe {
+        position:relative;
+        
+       width:100%;
+        background-color:#212121;
+        height:auto;
+    }
+
+    .aboutMeContent {
+        position:relative;
+        font-size:16px;
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-rows:0.17fr;
+        grid-template-areas:
+        'headshot' 
+        'aboutHeading'
+        'summary'
+         'uxskills'
+         'tools'
+         'download';
+       width:100%;
+
+    }
+
+#aboutHeading {
+    position:relative;
+    margin:0px auto;
+    width:80%;
+}
+
+    #headshot img {
+        width:75%;
+        position:relative;
+        grid-area:headshot;
+    }
+
+    #summary p{
+        width:80%;
+        position:relative;
+        padding-left:10px;
+        padding-right:10px;
+        grid-area:summary;
+        height:inherit;
+        padding-bottom:10px;
+    }
+
+    
+
+    #uxskills {
+        position:relative;
+        width:80%;
+        grid-area:uxskills;
+    }
+
+    .contact {
+        position:relative;
+        width:100%;
+        padding-left:0px;
+    }
+
+    .messageContent {
+        width:100%;
+
+    }
+
+   
+
+    footer p{
+        font-size:18px;
+        color:rgb(33,33,33);
+        justify-content:center;
+        text-align:center;
+       
+        
+    }
+    
+    
+    
+    footer {
+        background-color:#e6ae00;
+        height:auto;
+        margin-bottom:0px;
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    
+    .footerSM {
+      position:relative;
+       
+        display:flex;
+        flex-direction:horizontal;
+        
+     
+    }
+    
+    .footerNav {
+        
+        text-align:center;
+        padding-bottom:5px;
+        margin:0ps auto;
+        line-height:normal;
+    }
+    
+    
+    
+
+
 }
